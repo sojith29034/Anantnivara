@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Sedan+SC&display=swap');
+
+:root{
+    --title :font-family: "Abril Fatface", serif;
+    --sec-title :font-family: "Sedan SC", serif; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.hero h1.title{
+    position: absolute;
+    text-align: center;
+    padding: 40px;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    font-family: var(--title);
+    font-size: 28px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 3px;
+    color: #f00;
+    user-select: none;
+}
+.hero .title:hover{
+    animation: hover 0.5s 1 ease-in-out;
+}
+.hero span.title{
+    font-family: var(--sec-title);
+    font-size: 18px;
+    font-weight: 1000;
+    letter-spacing: 5px;
+    color: #f33;
+}
+.hero h1.contact{
+    position: absolute;
+    right: 0;
+    padding: 40px;
+    font-size: 14px;
+    color: #000;
+    font-family: var(--sec-title);
+}
+.hero h1.text{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    color: rgb(243, 251, 255);
+    animation: textColor 20s infinite ease-in-out;
+}
+.hero .bg{
+    position: absolute;
+    object-fit: contain;
+    z-index: -1;
+}
+
+.hero .scroll{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    font-size: 32px;
+    animation: scroll 2s infinite reverse ease-in-out;
+}
+@keyframes hover {
+    0%{
+        transform: scale(1,1);
+    }
+    20%{
+        transform: scale(0.9, 1.1);
+    }
+    80%{
+        transform: scale(1.1, 0.9);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+@keyframes textColor {
+    0%{
+        color: rgb(243, 251, 255);
+    }
+    70%{
+        color: #f00;
+    }
+    95%{
+        color: #f00;
+    }
+    100%{
+        color: rgb(243, 251, 255);
+    }
+}
+@keyframes scroll {
+    0%{
+        transform: translate(-50%,0%);
+        opacity: .2;
+    }
+    50%{
+        transform: translate(-50%,-25px);
+        opacity: 1;
+    }
+    85%{
+        transform: translate(-50%,-25px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(-50%,0%);
+        opacity: 0;
+    }
+}
