@@ -128,7 +128,7 @@ h2{
     height: 2px;
     position: absolute;
     top: 65%;
-    background-color: #f00;
+    background-color: var(--ter-text);
 }
 .container{
     column-count: 3;
