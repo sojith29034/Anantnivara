@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Sedan+SC&display=swap');
 
 :root{
-    --title: "Abril Fatface", serif;
+    --pri-title: "Abril Fatface", serif;
     --sec-title: "Sedan SC", serif; 
+
+    --pri-text: #ffc100;
+    --sec-text: #ff7400;
+    --ter-text: #ff0000;
 }
 
 *{
@@ -31,12 +35,12 @@ h2{
     position: absolute;
     text-align: center;
     padding: 40px;
-    font-family: var(--title);
+    font-family: var(--pri-title);
     font-size: 28px;
     font-weight: 500;
     font-style: normal;
     letter-spacing: 3px;
-    color: #f00;
+    color: var(--pri-text);
     user-select: none;
 }
 .hero .title:hover{
@@ -47,7 +51,6 @@ h2{
     font-size: 18px;
     font-weight: 1000;
     letter-spacing: 5px;
-    color: #f33;
 }
 .hero h1.contact{
     position: absolute;
@@ -64,13 +67,13 @@ h2{
     left: 50%;
     transform: translate(-50%,-50%);
     text-transform: uppercase;
-    color: rgb(243, 251, 255);
-    animation: textColor 20s infinite ease-in-out;
+    color: var(--sec-text);
 }
 .hero .bg{
     position: absolute;
     object-fit: contain;
     z-index: -1;
+    filter: grayscale(.7);
 }
 
 .hero .scroll{
@@ -93,20 +96,6 @@ h2{
     }
     100%{
         transform: scale(1,1);
-    }
-}
-@keyframes textColor {
-    0%{
-        color: rgb(243, 251, 255);
-    }
-    70%{
-        color: #f00;
-    }
-    95%{
-        color: #f00;
-    }
-    100%{
-        color: rgb(243, 251, 255);
     }
 }
 @keyframes scroll {
@@ -151,4 +140,9 @@ h2{
 img{
     height: 100%;
     width: 100%;
+    filter: grayscale(1);
+    transition: .5s all ease-in-out;
+}
+.image:hover img{
+    filter: grayscale(0);
 }
