@@ -31,16 +31,11 @@ h2{
     overflow: hidden;
     position: relative;
 }
-.hero h1.title{
+.hero .logo img{
     position: absolute;
-    text-align: center;
     padding: 40px;
-    font-family: var(--pri-title);
-    font-size: 28px;
-    font-weight: 500;
-    font-style: normal;
-    letter-spacing: 3px;
-    color: var(--pri-text);
+    width: 25%;
+    border-radius: 100px;
     user-select: none;
 }
 .hero .title:hover{
@@ -67,13 +62,13 @@ h2{
     left: 50%;
     transform: translate(-50%,-50%);
     text-transform: uppercase;
-    color: var(--sec-text);
+    color: hsla(85, 31%, 40%, 1);
 }
 .hero .bg{
     position: absolute;
     object-fit: contain;
     z-index: -1;
-    filter: grayscale(.7);
+    /* filter: grayscale(.7); */
 }
 
 .hero .scroll{
@@ -137,7 +132,7 @@ h2{
     position: relative;
     padding: 10px 0;
 }
-img{
+.image img{
     height: 100%;
     width: 100%;
     filter: grayscale(1);
