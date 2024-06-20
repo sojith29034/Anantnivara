@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     width: 100vw;
@@ -62,7 +63,7 @@ h2{
     left: 50%;
     transform: translate(-50%,-50%);
     text-transform: uppercase;
-    color: hsla(85, 31%, 40%, 1);
+    color: rgb(1, 95, 45);
 }
 .hero .bg{
     position: absolute;
@@ -71,12 +72,13 @@ h2{
     /* filter: grayscale(.7); */
 }
 
-.hero .scroll{
+.hero a.scroll{
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate(-50%,-100%);
     font-size: 32px;
+    color: black;
     animation: scroll 2s infinite reverse ease-in-out;
 }
 @keyframes hover {
@@ -131,6 +133,7 @@ h2{
 .image{
     position: relative;
     padding: 10px 0;
+    overflow: hidden;
 }
 .image img{
     height: 100%;
@@ -140,4 +143,5 @@ h2{
 }
 .image:hover img{
     filter: grayscale(0);
+    transform: scale(1.2);
 }
